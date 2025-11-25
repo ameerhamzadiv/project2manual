@@ -13,9 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Create Docker Image
-      run: docker build . -t ameerhamzacode/project2manual:02
+      run: docker build . -t ameerhamzacode/project2manual:01
     - name: Authenticate Docker Hub
       run: echo "${{secrets.DOCKERHUB_TOKEN}}" | docker login -u ameerhamzacode --password-stdin
     - name: Push to Docker Hub
-      run: dokcer push ameerhamzacode/project2manual:02
+      run: docker push ameerhamzacode/project2manual:01
 
